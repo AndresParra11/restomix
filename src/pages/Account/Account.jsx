@@ -6,7 +6,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faChevronLeft,
     faChevronRight,
+    faGlobe,
+    faLocationDot,
+    faQuestion,
+    faPhone,
+    faToggleOff,
 } from "@fortawesome/free-solid-svg-icons";
+import {
+    faUser,
+    faBell,
+    faMoneyBill1,
+} from "@fortawesome/free-regular-svg-icons";
 const Account = () => {
     const navigate = useNavigate();
     return (
@@ -26,7 +36,7 @@ const Account = () => {
             <div className="account-toDo">
                 <Link to={"profile"}>
                     <div className="each-toDo">
-                        <img src="" alt="" />
+                        <FontAwesomeIcon className="toDo-icon" icon={faUser} />
                         <p className="title">Account edit</p>
                         <p className="arrow">
                             <FontAwesomeIcon icon={faChevronRight} />
@@ -35,16 +45,19 @@ const Account = () => {
                 </Link>
                 <Link>
                     <div className="each-toDo">
-                        <img src="" alt="" />
+                        <FontAwesomeIcon className="toDo-icon" icon={faBell} />
                         <p className="title">Notifications</p>
                         <p className="arrow">
-                            <FontAwesomeIcon icon={faChevronRight} />
+                            <FontAwesomeIcon icon={faToggleOff} />
                         </p>
                     </div>
                 </Link>
                 <Link>
                     <div className="each-toDo">
-                        <img src="" alt="" />
+                        <FontAwesomeIcon
+                            className="toDo-icon"
+                            icon={faMoneyBill1}
+                        />
                         <p className="title">Payment</p>
                         <p className="arrow">
                             <FontAwesomeIcon icon={faChevronRight} />
@@ -53,14 +66,17 @@ const Account = () => {
                 </Link>
                 <Link>
                     <div className="each-toDo">
-                        <img src="" alt="" />
+                        <FontAwesomeIcon className="toDo-icon" icon={faGlobe} />
                         <p className="title">Language</p>
                         <p className="arrow">Eng</p>
                     </div>
                 </Link>
                 <Link>
                     <div className="each-toDo">
-                        <img src="" alt="" />
+                        <FontAwesomeIcon
+                            className="toDo-icon"
+                            icon={faLocationDot}
+                        />
                         <p className="title">Location</p>
                         <p className="arrow">
                             <FontAwesomeIcon icon={faChevronRight} />
@@ -69,7 +85,10 @@ const Account = () => {
                 </Link>
                 <Link>
                     <div className="each-toDo">
-                        <img src="" alt="" />
+                        <FontAwesomeIcon
+                            className="toDo-icon"
+                            icon={faQuestion}
+                        />
                         <p className="title">FAQ</p>
                         <p className="arrow">
                             <FontAwesomeIcon icon={faChevronRight} />
@@ -78,7 +97,7 @@ const Account = () => {
                 </Link>
                 <Link>
                     <div className="each-toDo">
-                        <img src="" alt="" />
+                        <FontAwesomeIcon className="toDo-icon" icon={faPhone} />
                         <p className="title">Support</p>
                         <p className="arrow">
                             <FontAwesomeIcon icon={faChevronRight} />
