@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import CreateAccount from "../pages/createAccount/CreateAccount";
 import Location from "../pages/location/Location";
 import NotFound from "../pages/notFound/NotFound";
@@ -7,6 +7,10 @@ import SingIn from "../pages/singIn/SingIn";
 import SplashScreen from "../pages/splashScreen/SplashScreen";
 import Slides from "../pages/slides/Slides";
 import Verification from "../pages/verification/Verification";
+import Payment from "../pages/Payment/Payment";
+import Details from "../pages/Details/Details";
+import Account from "../pages/Account/Account";
+import Profile from "../pages/Profile/Profile";
 import PublicRouter from "./PublicRouter";
 import PrivateRouter from "./PrivateRouter";
 import Home from "../pages/home/Home";
@@ -65,6 +69,12 @@ const AppRouter = () => {
           </Route>
           <Route element={<PrivateRouter isAutentication={isLoggedIn} />}>
             <Route path="/home" element={<Home />} />
+            <Route path="details" element={<Details />} />
+            <Route path="account">
+              <Route index element={<Account />} />
+              <Route path="profile" element={<Profile />} />
+            </Route>  
+            <Route path="payment" element={<Payment />} />
           </Route>
         </Route>
         <Route path="*" element={<NotFound />} />

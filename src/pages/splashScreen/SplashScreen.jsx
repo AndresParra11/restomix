@@ -13,7 +13,6 @@ const SplashScreen = () => {
         </figure>
       </Link>
     </div>
-  );
 };
 
 export default SplashScreen;
